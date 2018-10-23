@@ -1,0 +1,18 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "Lazyboards@0.5x.png",
+  "commands": [
+    {
+      "name": "Wrap icons",
+      "identifier": "my-command-identifier",
+      "script": "./wrap-icons.js"
+    }
+  ],
+  "menu": {
+    "title": "Lazyboards",
+    "items": [
+      "my-command-identifier"
+    ]
+  }
+}
