@@ -1,6 +1,6 @@
 {
   "name": "lazyboards",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Artboard tools to help you with tedious batch tasks.",
   "engines": {
     "sketch": ">=3.0"
