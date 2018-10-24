@@ -4,9 +4,9 @@
   "icon": "Lazyboards@0.5x.png",
   "commands": [
     {
-      "name": "Wrap icons",
+      "name": "Wrap",
       "identifier": "my-command-identifier",
-      "script": "./wrap-icons.js"
+      "script": "./lazywrap.js"
     }
   ],
   "menu": {

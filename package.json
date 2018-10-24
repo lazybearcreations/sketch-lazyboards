@@ -1,6 +1,7 @@
 {
   "name": "lazyboards",
   "version": "0.1.0",
+  "description": "Artboard tools to help you with tedious batch tasks.",
   "engines": {
     "sketch": ">=3.0"
   },
@@ -25,5 +26,8 @@
   "repository": {
     "type": "git",
     "url": "git+git@github.com:lazybearcreations/sketch-lazyboards.git"
+  },
+  "dependencies": {
+    "skpm": "^1.1.9"
   }
 }
