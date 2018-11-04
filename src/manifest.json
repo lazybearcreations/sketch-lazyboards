@@ -1,18 +1,24 @@
 {
-  "compatibleVersion": 3,
-  "bundleVersion": 1,
-  "icon": "Lazyboards@0.5x.png",
-  "commands": [
-    {
-      "name": "Wrap",
-      "identifier": "my-command-identifier",
-      "script": "./lazywrap.js"
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "Lazyboards@0.5x.png",
+    "commands": [
+        {
+            "name": "Wrap in square Artboard",
+            "identifier": "lazywrap",
+            "script": "./lazywrap.js"
+        },
+        {
+            "name": "Duplicate to all Artboards",
+            "identifier": "lazypaste",
+            "script": "./lazypaste.js"
+        }
+    ],
+    "menu": {
+        "title": "Lazyboards",
+        "items": [
+            "lazywrap",
+            "lazypaste"
+        ]
     }
-  ],
-  "menu": {
-    "title": "Lazyboards",
-    "items": [
-      "my-command-identifier"
-    ]
-  }
 }
