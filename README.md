@@ -12,8 +12,8 @@ _This plugin was created using `skpm`. For a detailed explanation on how things 
 
 [Watch it in action](https://youtu.be/_i9cOkof3Jk)
 
-Step 1: Select all the layers you wish to wrap in Artboards.
-Step 2: Select `Plugins` > `Lazyboards` > `Wrap layers in Artboards`
+1. Select all the layers you wish to wrap in Artboards.
+2. Select `Plugins` > `Lazyboards` > `Wrap layers in Artboards`
 
 ```
 Note: If you have Artboards in your selection, they will be ignored.
@@ -26,8 +26,8 @@ Note: If you have Artboards in your selection, they will be ignored.
 - If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
 - If no Artboards are found, nothing happens.
 
-Step 1. Select all the layers you wish to duplicate.
-Step 2. Select `Plugins` > `Lazyboards` > `Duplicate to all Artboards`
+1. Select all the layers you wish to duplicate.
+2. Select `Plugins` > `Lazyboards` > `Duplicate to all Artboards`
 
 ```
 Note: If you have Artboards in your selection, they will be ignored.
@@ -39,5 +39,5 @@ Note: If you have Artboards in your selection, they will be ignored.
 - If the layers are already in an Artboard, the duplicates will be placed in the same position relative to the top left corner of each Artboard.
 - If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
 
-Step 1. Select all the layers you wish to duplicate and all the Artboards that you wish to duplicate the layers to.
-Step 2. Select `Plugins` > `Lazyboards` > `Duplicate to selected Artboards`
+1. Select all the layers you wish to duplicate and all the Artboards that you wish to duplicate the layers to.
+2. Select `Plugins` > `Lazyboards` > `Duplicate to selected Artboards`
