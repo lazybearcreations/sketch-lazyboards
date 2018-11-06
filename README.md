@@ -4,12 +4,40 @@ Sketch Plugin written in Cocoascript to enhance the functionality of Artboards w
 
 _This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
 
-## Wrap in square Artboard
+## Wrap layers in Artboards
 
-Wrap will take all the layer in your selection and wrap them in a square Artboard with a width and height based on the longest side of the longest layer, then centers layers in the Artboard that wraps them.
+- `Wrap` will take all the layer in your selection and wrap them in a square Artboard.
+- Each Artboard will have a width and height based on the longest side of all the layers in the selection.
+- Layers will be centered in the newly created Artboards.
 
-[Watch what it does here](https://youtu.be/_i9cOkof3Jk)
+[Watch it in action](https://youtu.be/_i9cOkof3Jk)
+
+Step 1: Select all the layers you wish to wrap in Artboards.
+Step 2: Select `Plugins` > `Lazyboards` > `Wrap layers in Artboards`
+
+```
+Note: If you have Artboards in your selection, they will be ignored.
+```
 
 ## Duplicate to all Artboards
 
-Duplicate will take the selected layers and duplicate them to all Artboards on the same page.
+- `Duplicate to all` will take the selected layers and duplicate them to all Artboards on the same page.
+- If the layers are already in an Artboard, the duplicates will be placed in the same position relative to the top left corner of each Artboard.
+- If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
+- If no Artboards are found, nothing happens.
+
+Step 1. Select all the layers you wish to duplicate.
+Step 2. Select `Plugins` > `Lazyboards` > `Duplicate to all Artboards`
+
+```
+Note: If you have Artboards in your selection, they will be ignored.
+```
+
+## Duplicate to selected artboards
+
+- `Duplicate to selected` will take the layers you have selected and duplicate them to the Artboards that are also in your selection.
+- If the layers are already in an Artboard, the duplicates will be placed in the same position relative to the top left corner of each Artboard.
+- If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
+
+Step 1. Select all the layers you wish to duplicate and all the Artboards that you wish to duplicate the layers to.
+Step 2. Select `Plugins` > `Lazyboards` > `Duplicate to selected Artboards`

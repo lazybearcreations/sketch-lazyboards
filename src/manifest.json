@@ -4,21 +4,27 @@
     "icon": "Lazyboards@0.5x.png",
     "commands": [
         {
-            "name": "Wrap in square Artboard",
-            "identifier": "lazywrap",
-            "script": "./lazywrap.js"
+            "name": "Wrap layers in Artboards",
+            "identifier": "lazybearcreations.lazyboards.wrap-all-square",
+            "script": "./wrap-all-square.js"
         },
         {
             "name": "Duplicate to all Artboards",
-            "identifier": "lazypaste",
-            "script": "./lazypaste.js"
+            "identifier": "lazybearcreations.lazyboards.duplicate-to-all",
+            "script": "./duplicate-to-all.js"
+        },
+        {
+            "name": "Duplicate to selected Artboards",
+            "identifier": "lazybearcreations.lazyboards.duplicate-to-selected",
+            "script": "./duplicate-to-selected.js"
         }
     ],
     "menu": {
         "title": "Lazyboards",
         "items": [
-            "lazywrap",
-            "lazypaste"
+            "lazybearcreations.lazyboards.wrap-all-square",
+            "lazybearcreations.lazyboards.duplicate-to-all",
+            "lazybearcreations.lazyboards.duplicate-to-selected"
         ]
     }
 }
