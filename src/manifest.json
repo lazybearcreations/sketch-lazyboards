@@ -6,17 +6,20 @@
         {
             "name": "Wrap layers in Artboards",
             "identifier": "lazybearcreations.lazyboards.wrap-all-square",
-            "script": "./wrap-all-square.js"
+            "script": "./wrap-all-square.js",
+            "shortcut": "cmd shift w"
         },
         {
             "name": "Duplicate to all Artboards",
             "identifier": "lazybearcreations.lazyboards.duplicate-to-all",
-            "script": "./duplicate-to-all.js"
+            "script": "./duplicate-to-all.js",
+            "shortcut": "cmd alt shift d"
         },
         {
             "name": "Duplicate to selected Artboards",
             "identifier": "lazybearcreations.lazyboards.duplicate-to-selected",
-            "script": "./duplicate-to-selected.js"
+            "script": "./duplicate-to-selected.js",
+            "shortcut": "cmd shift d"
         }
     ],
     "menu": {
