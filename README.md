@@ -10,7 +10,7 @@ _This plugin was created using `skpm`. For a detailed explanation on how things 
 - Each Artboard will have a width and height based on the longest side of all the layers in the selection.
 - Layers will be centered in the newly created Artboards.
 
-[Watch it in action](https://youtu.be/_i9cOkof3Jk)
+![Wrap layers in Artboards animated gif](https://raw.githubusercontent.com/lazybearcreations/sketch-lazyboards/master/assets/Wrap-in-artboards.gif)
 
 1. Select all the layers you wish to wrap in Artboards.
 2. Select `Plugins` > `Lazyboards` > `Wrap layers in Artboards`
@@ -26,6 +26,8 @@ Note: If you have Artboards in your selection, they will be ignored.
 - If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
 - If no Artboards are found, nothing happens.
 
+![Wrap layers in Artboards animated gif](https://raw.githubusercontent.com/lazybearcreations/sketch-lazyboards/master/assets/Duplicate-to-all-Artboards.gif)
+
 1. Select all the layers you wish to duplicate.
 2. Select `Plugins` > `Lazyboards` > `Duplicate to all Artboards`
 
@@ -38,6 +40,8 @@ Note: If you have Artboards in your selection, they will be ignored.
 - `Duplicate to selected` will take the layers you have selected and duplicate them to the Artboards that are also in your selection.
 - If the layers are already in an Artboard, the duplicates will be placed in the same position relative to the top left corner of each Artboard.
 - If the layers are already in an Artboard, the layers will not be duplicated to the Artboard where they originate.
+
+![Wrap layers in Artboards animated gif](https://raw.githubusercontent.com/lazybearcreations/sketch-lazyboards/master/assets/Duplicate-to-selected-Artboards.gif)
 
 1. Select all the layers you wish to duplicate and all the Artboards that you wish to duplicate the layers to.
 2. Select `Plugins` > `Lazyboards` > `Duplicate to selected Artboards`
