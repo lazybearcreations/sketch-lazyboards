@@ -32,6 +32,7 @@ export default function() {
 
         if (artboards.length === 0) { Ui.message('No Artboards selected.'); return false; }
         if (layers.length === 0) { Ui.message('No Layers selected.'); return false; }
+        
         artboards.forEach(function(artboard, i) {
 
             var duplicateLayers = [];

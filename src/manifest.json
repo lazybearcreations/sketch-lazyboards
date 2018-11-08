@@ -17,6 +17,16 @@
             "name": "Duplicate to selected Artboards",
             "identifier": "lazybearcreations.lazyboards.duplicate-to-selected",
             "script": "./duplicate-to-selected.js"
+        },
+        {
+            "name": "Paste to selected Artboards",
+            "identifier": "lazybearcreations.lazyboards.paste-to-selected",
+            "script": "./paste-to-selected.js"
+        },
+        {
+            "name": "Paste to all Artboards",
+            "identifier": "lazybearcreations.lazyboards.paste-to-all",
+            "script": "./paste-to-all.js"
         }
     ],
     "menu": {

@@ -1,7 +1,7 @@
 import sketch from 'sketch'
 // documentation: https://developer.sketchapp.com/reference/api/
 
-export default function() {
+export default function( context ) {
 
     var Dom = require('sketch/dom');
     var Ui = require('sketch/ui');
