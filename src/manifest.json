@@ -2,6 +2,7 @@
     "compatibleVersion": 3,
     "bundleVersion": 1,
     "icon": "Lazyboards@0.5x.png",
+    "identifier": "lazybearcreations.lazyboards",
     "commands": [
         {
             "name": "Wrap layers in Artboards",
