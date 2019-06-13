@@ -1,6 +1,7 @@
 import { fromNative } from 'sketch';
 
 let selected = {
+    groups: [],
     shapes: [],
     texts: [],
     artboards: []
@@ -11,6 +12,7 @@ let selectedLayerCount;
 let selectedShapeCount;
 let selectedTextCount;
 let selectedArtboardCount;
+let selectedGroupCount;
 
 const sortSelection = (selectionNative) => {
 
@@ -18,19 +20,26 @@ const sortSelection = (selectionNative) => {
 
         let layer = fromNative(layerNative);
 
-        if (layer.type === "Artboard") { selected.artboards.push(layer); }
-        else if (layer.type === "Text") { selected.texts.push(layer); }
-        else { selected.shapes.push(layer); }
+        if (layer.type === "Artboard") { selected.artboards.push(layerNative); }
+        else if (layer.type === "Text") { selected.texts.push(layerNative); }
+        else if (layer.type === "Group") { selected.groups.push(layerNative); }
+        else if (layer.type === "Shape") { selected.shapes.push(layerNative); }
 
     });
 
     selectedShapeCount = selected.shapes.length;
     selectedTextCount = selected.texts.length;
     selectedArtboardCount = selected.artboards.length;
+    selectedGroupCount = selected.groups.length;
+
+    selectionCount = 0;
+    selectedLayerCount = 0;
 
     Object.keys(selected).forEach((key) => {
+
         selectionCount += selected[key].length;
         if (key != "artboards") { selectedLayerCount += selected[key].length; }
+
     });
 
     return;
@@ -38,17 +47,17 @@ const sortSelection = (selectionNative) => {
 }
 
 const getSelectedLayers = (contextNative) => {
-    if (!selectedShapeCount || !selectedTextCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+    if (!selectedShapeCount && !selectedTextCount && !selectedGroupCount) {
+        sortSelection( contextNative.selection );
     }
-    return [].concat(selected.shapes, selected.texts);
+    return [].concat(selected.shapes, selected.texts, selected.groups);
 
 }
 
 const getSelectedShapes = (contextNative) => {
 
     if (!selectedShapeCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selected.shapes;
 
@@ -57,7 +66,7 @@ const getSelectedShapes = (contextNative) => {
 const getSelectedTexts = (contextNative) => {
 
     if (!selectedTextCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selected.texts;
 
@@ -66,16 +75,25 @@ const getSelectedTexts = (contextNative) => {
 const getSelectedArtboards = (contextNative) => {
 
     if (!selectedArtboardCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selected.artboards;
+
+}
+
+const getSelectedGroups = (contextNative) => {
+
+    if (!selectedGroupCount) {
+        sortSelection( contextNative.selection );
+    }
+    return selected.groups;
 
 }
 
 const getSelectedLayerCount = (contextNative) => {
 
     if (!selectedLayerCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selectedLayerCount;
 
@@ -84,7 +102,7 @@ const getSelectedLayerCount = (contextNative) => {
 const getSelectedShapeCount = (contextNative) => {
 
     if (!selectedShapeCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selectedShapeCount;
 
@@ -93,7 +111,7 @@ const getSelectedShapeCount = (contextNative) => {
 const getSelectedTextCount = (contextNative) => {
 
     if (!selectedTextCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selectedTextCount;
 
@@ -102,9 +120,18 @@ const getSelectedTextCount = (contextNative) => {
 const getSelectedArtboardCount = (contextNative) => {
 
     if (!selectedArtboardCount) {
-        sortSelection( contextNative.document.selectedLayers().layers() );
+        sortSelection( contextNative.selection );
     }
     return selectedArtboardCount;
+
+}
+
+const getSelectedGroupCount = (contextNative) => {
+
+    if (!selectedGroupCount) {
+        sortSelection( contextNative.selection );
+    }
+    return selectedGroupCount;
 
 }
 
@@ -122,10 +149,12 @@ export {
     getSelectedShapes,
     getSelectedTexts,
     getSelectedArtboards,
+    getSelectedGroups,
     getSelectedLayerCount,
     getSelectedShapeCount,
     getSelectedTextCount,
     getSelectedArtboardCount,
+    getSelectedGroupCount,
     getLayerType,
     hasSharedStyle
 }

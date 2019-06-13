@@ -18,7 +18,10 @@ export default function(contextNative) {
         message('No layers are selected.');
     } else {
 
-        selectedLayers.forEach(function(layer, i) {
+        selectedLayers.forEach(function(layerNative, i) {
+
+            let layer = fromNative(layerNative);
+
             if (layer.type !== "Artboard") {
 
                 let artboard = new Artboard({

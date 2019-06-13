@@ -18,15 +18,18 @@ export default function(contextNative) {
         message('No layers are selected.');
     } else {
 
-        const layers = selectedLayers.map((layer) => {
-            return layer.type !== "Artboard" && layer;
-        }).filter(layer => layer);
+        const nativeLayers = selectedLayers.map((layerNative) => {
+            let layer = fromNative(layerNative);
+            return layer.type !== "Artboard" && layerNative;
+        }).filter(layerNative => layerNative);
 
-        let width = Math.max.apply(Math, layers.map( (l) => { return l.frame.width; }) );
-        let height = Math.max.apply(Math, layers.map( (l) => { return l.frame.height; }) );
+        let width = Math.max.apply(Math, nativeLayers.map( (layerNative) => { return layerNative.widthAnchor().length(); }) );
+        let height = Math.max.apply(Math, nativeLayers.map( (layerNative) => { return layerNative.heightAnchor().length(); }) );
         let area = Math.max(width, height);
 
-        selectedLayers.forEach(function(layer, i) {
+        selectedLayers.forEach(function(layerNative, i) {
+
+            let layer = fromNative(layerNative);
 
             if (layer.type !== "Artboard") {
 
