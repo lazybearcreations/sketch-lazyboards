@@ -1,7 +1,12 @@
 {
   "name": "lazyboards",
   "version": "4.2.0",
-  "description": "Artboard tools to help you with tedious batch tasks.",
+  "description": "Artboard tools to help you streamline your workflow and batch tasks.",
+  "homepage": "https://github.com/lazybearcreations/sketch-lazyboards",
+  "bugs": {
+    "url": "https://github.com/lazybearcreations/sketch-lazyboards/issues"
+  },
+  "license": "MIT",
   "engines": {
     "sketch": ">=3.0"
   },
@@ -28,6 +33,6 @@
     "url": "git+git@github.com:lazybearcreations/sketch-lazyboards.git"
   },
   "dependencies": {
-    "skpm": "^1.1.9"
+    "skpm": "^1.2.0"
   }
 }
