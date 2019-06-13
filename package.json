@@ -6,6 +6,19 @@
   "bugs": {
     "url": "https://github.com/lazybearcreations/sketch-lazyboards/issues"
   },
+  "keywords": [
+    "sketch",
+    "sketchapp",
+    "sketch 53",
+    "sketch 53.1",
+    "sketch 53.2",
+    "sketch 54",
+    "sketch 54.1",
+    "plugin",
+    "artboards",
+    "artboard tool",
+    "lazybear creations"
+  ],
   "license": "MIT",
   "engines": {
     "sketch": ">=3.0"
