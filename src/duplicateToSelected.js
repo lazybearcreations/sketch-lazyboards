@@ -7,6 +7,8 @@ import * as Settings from './lib/Settings';
 
 export default function(context) {
 
+    const selectedArtboards = Layer.getSelectedArtboards(contextNative);
+
     Settings.setSettingForKey('offset-x', 10);
     Settings.setSettingForKey('offset-y', 10);
 
