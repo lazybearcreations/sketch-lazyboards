@@ -1,7 +1,25 @@
 {
   "name": "lazyboards",
   "version": "4.2.0",
-  "description": "Artboard tools to help you with tedious batch tasks.",
+  "description": "Artboard tools to help you streamline your workflow and batch tasks.",
+  "homepage": "https://github.com/lazybearcreations/sketch-lazyboards",
+  "bugs": {
+    "url": "https://github.com/lazybearcreations/sketch-lazyboards/issues"
+  },
+  "keywords": [
+    "sketch",
+    "sketchapp",
+    "sketch 53",
+    "sketch 53.1",
+    "sketch 53.2",
+    "sketch 54",
+    "sketch 54.1",
+    "plugin",
+    "artboards",
+    "artboard tool",
+    "lazybear creations"
+  ],
+  "license": "MIT",
   "engines": {
     "sketch": ">=3.0"
   },
@@ -20,7 +38,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.7.0"
+    "@skpm/builder": "^0.5.2"
   },
   "author": "Adam Bruzon <adam@lbc.email>",
   "repository": {
@@ -28,6 +46,6 @@
     "url": "git+git@github.com:lazybearcreations/sketch-lazyboards.git"
   },
   "dependencies": {
-    "skpm": "^1.1.9"
+    "skpm": "^1.2.0"
   }
 }
