@@ -1,32 +1,43 @@
 {
     "compatibleVersion": 3,
     "bundleVersion": 1,
+    "author": "Adam Bruzon",
     "icon": "Lazyboards@0.5x.png",
     "identifier": "lazybearcreations.lazyboards",
     "commands": [
         {
-            "name": "Wrap layers in Artboards",
-            "identifier": "lazybearcreations.lazyboards.wrap-all-square",
-            "script": "./wrap-all-square.js",
+            "name": "Wrap layer in Artboards [TIGHT]",
+            "identifier": "lazybearcreations.lazyboards.wrap-tight",
+            "script": "./wrapTight.js",
+            "shortcut": "cmd alt shift w"
+        },
+        {
+            "name": "Wrap layer in Artboards [SQUARE]",
+            "identifier": "lazybearcreations.lazyboards.wrap-square",
+            "script": "./wrapSquare.js",
             "shortcut": "cmd shift w"
         },
         {
-            "name": "Duplicate to all Artboards",
+            "name": "Duplicate layer to all Artboards",
+            "description": "Select one or more layers to be duplicated.",
             "identifier": "lazybearcreations.lazyboards.duplicate-to-all",
-            "script": "./duplicate-to-all.js",
+            "script": "./duplicateToAll.js",
             "shortcut": "cmd alt shift d"
         },
         {
-            "name": "Duplicate to selected Artboards",
+            "name": "Duplicate layer to selected Artboards",
+            "description": "Select a layer and the Artboards that it needs to be copied to.",
             "identifier": "lazybearcreations.lazyboards.duplicate-to-selected",
-            "script": "./duplicate-to-selected.js",
+            "script": "./duplicateToSelected.js",
             "shortcut": "cmd shift d"
         }
     ],
     "menu": {
         "title": "Lazyboards",
         "items": [
-            "lazybearcreations.lazyboards.wrap-all-square",
+            "lazybearcreations.lazyboards.wrap-tight",
+            "lazybearcreations.lazyboards.wrap-square",
+            "-",
             "lazybearcreations.lazyboards.duplicate-to-all",
             "lazybearcreations.lazyboards.duplicate-to-selected"
         ]
