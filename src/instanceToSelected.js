@@ -14,9 +14,8 @@ export default function() {
     var page = document.selectedPage;
 
     var selectedLayers = document.selectedLayers;
-    var selectedCount = selectedLayers.length;
 
-    if (selectedCount === 0) {
+    if (selectedLayers.isEmpty) {
         Ui.message('No layers are selected.');
     } else {
 
@@ -32,6 +31,7 @@ export default function() {
 
         if (artboards.length === 0) { Ui.message('No Artboards selected.'); return false; }
         if (layers.length === 0) { Ui.message('No Layers selected.'); return false; }
+
         artboards.forEach(function(artboard, i) {
 
             var duplicateLayers = [];

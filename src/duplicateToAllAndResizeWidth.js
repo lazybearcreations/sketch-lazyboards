@@ -1,24 +1,25 @@
-import sketch from 'sketch'
-// documentation: https://developer.sketchapp.com/reference/api/
+import { fromNative } from 'sketch';
+import { message } from 'sketch/ui';
+import { Artboard, Rectangle } from 'sketch/dom';
 
-export default function() {
+import * as Layer from './lib/Layer';
+import * as Settings from './lib/Settings';w
 
-    var Dom = require('sketch/dom');
-    var Ui = require('sketch/ui');
-
-    var Settings = require('sketch/settings');
+export default ( context ) => {
 
     Settings.setSettingForKey('offset-x', 10);
     Settings.setSettingForKey('offset-y', 10);
 
-    var document = sketch.getSelectedDocument();
-    var page = document.selectedPage;
+    const document = fromNative(context.document);
 
-    var selectedLayers = document.selectedLayers;
-    var selectedCount = selectedLayers.length;
+    const selectedLayers = Layer.getSelectedLayers(context);
+    const selectedLayersCount = Layer.getSelectedLayerCount();
 
-    if (selectedCount === 0) {
-        Ui.message('No layers are selected.');
+    console.log(selectedLayers);
+    return;
+
+    if (selectedLayersCount === 0) {
+        message('No layers are selected.');
     } else {
 
         var layers = [];
@@ -53,8 +54,8 @@ export default function() {
                             duplicateLayers[i].frame.y = 0;
                         }
 
-                        duplicateLayers[i].frame.x += Settings.settingForKey('offset-x');
-                        duplicateLayers[i].frame.y += Settings.settingForKey('offset-y');
+                        duplicateLayers[i].frame.x += Settings.getSettingForKey('offset-x');
+                        duplicateLayers[i].frame.y += Settings.getSettingForKey('offset-y');
 
                     }
 

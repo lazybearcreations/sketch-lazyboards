@@ -2,6 +2,11 @@
   "name": "lazyboards",
   "version": "4.2.0",
   "description": "Artboard tools to help you with tedious batch tasks.",
+  "homepage": "---------------FILL ME IN!------------------",
+  "bugs": {
+    "url": "---------------FILL ME IN!------------------"
+  },
+  "license": "MIT",
   "engines": {
     "sketch": ">=3.0"
   },
